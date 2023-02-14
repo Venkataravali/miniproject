@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:steelblue;
+    font-family: 'Muli',sans-serif;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    overflow:hidden;
+    margin:0;
+    /* if any gaps are there it will fill */
+
+}
+.container{
+    background-color: rgba(0,0,0,0.4);
+    padding:20px 40px;
+    /* top and bottom ,left right */
+    border-radius:5px;
+
+
+}
+.container h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+.container a{
+    text-decoration: none;
+    /* for register link */
+    color:lightblue
+}
+.form-control{
+    /* which wraps around input and label */
+    position:relative;
+    /* it places relative to current pos and won't change layout around it */
+    /* bcs i want labels to be positioned absolute */
+    margin:20px 0 40px;
+    /* top left,right and bottom */
+    width:300px;
+}
+.form-control input{
+    background-color:transparent;
+    border:0;
+    border-bottom:2px white solid;
+    /* here it came inline we want to display it block */
+    display:block;
+    /* to get input in block */
+    width:100%;
+    padding:15px 0;
+    /* top and bottom is 15px */
+    font-size:18px;
+    color:white;
+}
+
+.form-control input:focus, .form-control input:valid{
+    outline:0;
+    border-bottom-color: lightblue;
+}
+.btn{
+    cursor:pointer;
+    display: inline-block;
+    width:100%;
+    background:lightblue;
+    padding:15px;
+    font-family:inherit;
+    font-size:16px;
+    border:0;
+    border-radius:5px;
+
+}
+.btn:focus{
+    outline:0;
+}
+.btn:active{
+    transform:scale(0.98)
+    /* scale it down a bit */
+}
+.text{
+    margin-top:30px;
+}
+.form-control label{
+    position:absolute; 
+    /* it places relative to parent pos and changes layout around it bcs form-control is relative */
+    top:15px;
+    /* it will to top upto 15px */
+    left:0;
+}
+.form-control label span{
+    display:inline-block;
+    font-size:18px;
+    min-width:5px;
+    transition:0.3s cubic-bazier(0.68,-0.55,0.265,1.55);
+    /* curve with variable speed from start to end p0,p1,p2,p3..........*/
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color:lightblue;
+    transform:translateY(-30px);
+    /* to move up */
+    
+}
+
+
+
+
+
+
+
+
+

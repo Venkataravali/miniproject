@@ -1,0 +1,68 @@
+*{
+    box-sizing:boder-box;
+}
+body{
+    background-color:#efedd6;
+    font-family:'Roboto',sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin:0;
+
+}
+h1{
+    margin: 10px;
+
+}
+.box{
+
+    background-color: steelblue;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:400px;
+    height:200px;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:2px 4px 5px rgba(0,0,0,0.3);
+    /* 4px is for offset and 5px for border rgba for color  */
+    transform: translateX(200%);   
+    transition: transform 0.4 ease;
+    overflow-x:hidden;
+    /* to get hidden horizontal scrollbar  */
+    /* transition on transform property to add class in ease effect */
+    /* if we set that to 400% it will show wide screen  */
+    /* for animation we use animation property translate throgh x-axis move upto 200% o is default */
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-200%);
+
+    /* wanna come from diff sides  */
+}
+
+.box.show{
+    transform: translateX(0);
+    /* we dynamically add the class to coming from diff sides 
+*/
+}
+
+ .box h2 {
+    font-size:45px;
+}
+
+
+
+
+
+
+
+
+
+
+    
+
+
+}
